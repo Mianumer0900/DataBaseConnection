@@ -9,9 +9,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json())
 
-// app.get("/" , (req , res)=>{
-//   res.json({message:"Hello World!", status:"Success"})
-// })
+app.get("/" , (req , res)=>{
+  res.json({message:"Hello World!", status:"Success"})
+})
 
 createUserTable()
 app.use("/api",userRoutes);

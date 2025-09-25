@@ -1,12 +1,11 @@
 import express from "express";
-// import createUser from "../controllers/userControllers.js";
-import { createUser } from "../controllers/userControllers.js";
+import { createUser , getAllUsers , getUsersByID,deleteUsersBYID,updateUserByID } from "../controllers/userControllers.js";
 
 const router = express.Router();
 
-// router.get ("/users" , (request,result)=>{
-//  result.json({message:"User Route", status:"Success"})
-// })
-
+router.get("/users", getAllUsers);
+router.get("/users/:id" ,getUsersByID)
 router.post("/users", createUser);
+router.delete("/users/:id" ,deleteUsersBYID)
+router.patch("/users/:id" ,updateUserByID)
 export default router;

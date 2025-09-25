@@ -1,4 +1,4 @@
-import pool from "../config/db.js"; // adjust path if needed
+import pool from "../config/db.js";
 
 const createUserTable = async () => {
   const query = `
